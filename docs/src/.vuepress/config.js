@@ -6,6 +6,10 @@ module.exports = {
    */
   title: 'UAV Assess VR',
   /**
+   * Ref：https://vuepress.vuejs.org/config/#base
+   */
+  base: '/uav-assess-vr/',
+  /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
