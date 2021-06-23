@@ -1,0 +1,28 @@
+{
+  "$schema": "../uav-assessment.schema.json",
+  "assessmentMessage": {
+    "meta": {
+      "info": "Przykładowa odpowiedź na wiadomość basicSim.json. W tej odpowiedzi przekazywana jest tylko ogólna ocena."
+    },
+    "frames": [
+      {
+        "time": 0,
+        "score": [
+          0.8
+        ]
+      },
+      {
+        "time": 0.1,
+        "score": [
+          0.8
+        ]
+      },
+      {
+        "time": 0.2,
+        "score": [
+          0.9
+        ]
+      }
+    ]
+  }
+}

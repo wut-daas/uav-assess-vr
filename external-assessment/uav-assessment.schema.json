@@ -1,0 +1,143 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://oblot.pw.edu.pl/uav-assessment.schema.json",
+  "title": "UAV Assessment",
+  "description": "Format for data exchange in simulation for assessment of UAV operator performance",
+  "type": "object",
+  "properties": {
+    "simulationMessage": {
+      "description": "Message sent from simulation to request assessment",
+      "type": "object",
+      "properties": {
+        "meta": {
+          "type": "object",
+          "properties": {
+            "profile": {
+              "description": "Name of the operator's profile, used to identify them",
+              "type": "string"
+            },
+            "level": {
+              "description": "Name of the played map, used to identify current excercise",
+              "type": "string"
+            },
+            "info": {
+              "description": "Additional comments, debugging etc.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "profile",
+            "level"
+          ]
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "time": {
+                "description": "Time from start of assessment in seconds",
+                "type": "number"
+              },
+              "position": {
+                "description": "Position in local North-East-Down coordinate system in meters",
+                "$ref": "#/definitions/vector3"
+              },
+              "velocity": {
+                "description": "Velocity in local North-East-Down coordinate system in meters per second",
+                "$ref": "#/definitions/vector3"
+              },
+              "attitude": {
+                "description": "Attitude Roll-Pitch-Yaw in degrees",
+                "$ref": "#/definitions/vector3"
+              },
+              "reference": {
+                "description": "Distance from reference track in meters",
+                "type": "number"
+              },
+              "obstacle": {
+                "description": "Distance from obstacles in meters",
+                "type": "number"
+              },
+              "events": {
+                "description": "Events that happened since previous message was sent",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "time"
+            ]
+          }
+        }
+      }
+    },
+    "assessmentMessage": {
+      "description": "Message sent to simulation with assessed score",
+      "type": "object",
+      "properties": {
+        "meta": {
+          "type": "object",
+          "properties": {
+            "info": {
+              "description": "Additional comments, debugging etc.; it is advised to describe score values here",
+              "type": "string"
+            }
+          }
+        },
+        "frames": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "time": {
+                "description": "Time corresponding to frame time from simulationMessage",
+                "type": "number"
+              },
+              "score": {
+                "description": "A measure of operator performance; the mandatory first item is overall operator rating from 0 to 1",
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 1
+              },
+              "info": {
+                "description": "Additional comments, debugging etc.",
+                "type": "string"
+              }
+            },
+            "required": [
+              "time",
+              "score"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "vector3": {
+      "description": "3D vector type; linear values should use meters, angular should use degrees",
+      "type": "object",
+      "properties": {
+        "x": {
+          "type": "number"
+        },
+        "y": {
+          "type": "number"
+        },
+        "z": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "x",
+        "y",
+        "z"
+      ]
+    }
+  }
+}

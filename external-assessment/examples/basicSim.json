@@ -1,0 +1,34 @@
+{
+  "$schema": "../uav-assessment.schema.json",
+  "simulationMessage": {
+    "meta": {
+      "profile": "Operator 1",
+      "level": "BasicFlight",
+      "info": "Przykładowa wiadomość wysłana z symulacji do funkcji oceniającej. Opisuje lot na mapie 'BasicFlight' wykonany przez użytkownika 'Operator 1'. Wysłano trzy ramki do oceny: o czasie 0 od startu oceniania był 0.5m od referencyjnej trasy; o czasie 0.1s był 0.508m od referencyjnej trasy; o czasie 0.2s był w odległości 0.437m od referencyjnej trasy. Opcjonalny klucz '$id' na początku pliku wskazuje automatycznym systemom jak interpretować tę wiadomość"
+    },
+    "frames": [
+      {
+        "time": 0,
+        "position": {
+          "x": 1.248,
+          "y": 2.137,
+          "z": 4.213
+        },
+        "reference": 0.5
+      },
+      {
+        "time": 0.1,
+        "position": {
+          "x": 1.260,
+          "y": 2.137,
+          "z": 4.213
+        },
+        "reference": 0.508
+      },
+      {
+        "time": 0.2,
+        "reference": 0.437
+      }
+    ]
+  }
+}
