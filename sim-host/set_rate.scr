@@ -1,0 +1,6 @@
+shell echo "This is a MAVProxy script. (I didn't think of a different way to do comments)"
+shell echo "Run this with `script set_rate.scr` if launching simulation from this directory"
+
+shell echo "Setting messages LOCAL_POSITION_NED and ATTITUDE to 40 Hz (25000 us interval)"
+long SET_MESSAGE_INTERVAL 30 25000
+long SET_MESSAGE_INTERVAL 32 25000

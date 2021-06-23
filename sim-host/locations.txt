@@ -1,0 +1,4 @@
+# copy this file to ~/.config/ardupilot/
+#NAME=latitude,longitude,absolute-altitude,heading
+EPPZ-pas=53.01271368,20.92763582,117.8,291
+EPPZ-oblot=53.00495027,20.93038867,120,0
