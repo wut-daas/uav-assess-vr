@@ -1,10 +1,10 @@
-const { description } = require('../../package')
+const { description } = require('../../package.json')
 
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'UAV Assess VR',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -27,33 +27,33 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
+    repo: 'wut-daas/uav-assess-vr',
+    editLinks: true,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
-        text: 'Guide',
+        text: 'User Guide',
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: 'Developer Guide',
+        link: '/developer/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'OBLot Research Centre',
+        link: 'https://oblot.pw.edu.pl/'
       }
     ],
     sidebar: {
       '/guide/': [
         {
-          title: 'Guide',
+          title: 'User Guide',
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'getting-started',
           ]
         }
       ],

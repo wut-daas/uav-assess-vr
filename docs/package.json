@@ -1,6 +1,6 @@
 {
   "name": "uav-assess-vr",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Visualisation and evaluation of UAV operator&#39;s performance based on received MAVLink stream",
   "main": "index.js",
   "authors": {
