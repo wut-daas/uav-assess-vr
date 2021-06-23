@@ -6,7 +6,7 @@ module.exports = {
    */
   title: 'UAV Assess VR',
   /**
-   * Ref：https://vuepress.vuejs.org/config/#base
+   * Ref：https://v1.vuepress.vuejs.org/config/#base
    */
   base: '/uav-assess-vr/',
   /**
@@ -33,7 +33,7 @@ module.exports = {
   themeConfig: {
     repo: 'wut-daas/uav-assess-vr',
     editLinks: true,
-    docsDir: '',
+    docsDir: 'docs',
     editLinkText: '',
     lastUpdated: true,
     nav: [
