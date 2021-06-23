@@ -1,0 +1,19 @@
+{
+  "name": "uav-assess-vr",
+  "version": "0.0.1",
+  "description": "Visualisation and evaluation of UAV operator&#39;s performance based on received MAVLink stream",
+  "main": "index.js",
+  "authors": {
+    "name": "",
+    "email": ""
+  },
+  "repository": "https://github.com/wut-daas/uav-assess-vr",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
