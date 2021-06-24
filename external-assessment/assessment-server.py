@@ -87,7 +87,7 @@ class AssessmentHandler(socketserver.StreamRequestHandler):
 
             response_frames = []
             try: 
-                message = json.loads(self.data.strip(b'\0').decode('utf-8', 'strict'))
+                message = json.loads(self.data[:-1].decode('utf-8', 'strict'))
                 if args.verbose:
                     print(message)
                 for frame in message['simulationMessage']['frames']:
