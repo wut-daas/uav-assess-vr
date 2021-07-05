@@ -32,7 +32,7 @@ module.exports = {
    */
   themeConfig: {
     repo: 'wut-daas/uav-assess-vr',
-    editLinks: true,
+    editLinks: false,
     docsDir: 'docs',
     editLinkText: '',
     lastUpdated: true,
@@ -58,9 +58,24 @@ module.exports = {
           children: [
             '',
             'getting-started',
+            'autopilot-simulation'
           ]
         }
       ],
+      '/developer/': [
+        {
+          title: 'Developer Guide',
+          collapsable: false,
+          children: [
+            '',
+            'tasks',
+            'assessment',
+            'hardware',
+            'visuals',
+            'documentation'
+          ]
+        }
+      ]
     }
   },
 
