@@ -1,4 +1,4 @@
-#!/usr/bin/env python4
+#!/usr/bin/env python3
 
 import argparse
 parser = argparse.ArgumentParser()
@@ -11,7 +11,6 @@ import json
 
 HOST = 'localhost'
 PORT = 54003
-BUFFER_SIZE = 1024
 
 
 def score_reference_dist(sim_frame: dict) -> dict:
