@@ -5,10 +5,10 @@ shell echo "Setting messages LOCAL_POSITION_NED and ATTITUDE to 40 Hz (12.5 ms i
 long SET_MESSAGE_INTERVAL 30 12500
 long SET_MESSAGE_INTERVAL 32 12500
 
-shell echo "Setting wind from South, 3 m/s, full speed 3m above ground"
+shell echo "Setting wind from South, 2 m/s, full speed 1 m above ground"
 param set SIM_WIND_DIR 180
-param set SIM_WIND_SPD 3
-param set SIM_WIND_T_ALT 3
+param set SIM_WIND_SPD 2
+param set SIM_WIND_T_ALT 1
 
 shell echo "Enabling joystick"
 module load joystick
