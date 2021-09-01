@@ -12,3 +12,12 @@ param set SIM_WIND_T_ALT 1
 
 shell echo "Enabling joystick"
 module load joystick
+
+shell echo "Setting flight modes on channel 5: RTL, Loiter, Loiter, AltHold, Stabilize, Acro"
+param set FLTMODE_CH 5
+param set FLTMODE1 6
+param set FLTMODE2 5
+param set FLTMODE3 5
+param set FLTMODE4 2
+param set FLTMODE5 0
+param set FLTMODE6 1
